@@ -34,8 +34,8 @@ jobs:
           #echo "ROOT"
           #ls -la
           #echo "CLONED REPO"
-          ls -r
+          ls -LR
           cd Programming_for_ML_Student_Workbooks
           #ls -la
-          ls -r
+          ls -LR
           
