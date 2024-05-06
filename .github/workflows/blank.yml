@@ -8,8 +8,6 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -46,13 +44,13 @@ jobs:
       - name: Access cloned repository content
         run: |
           # Check Status
-          ls -rf
+          #ls -rf
 
           # Workbooks
           rm -rf workbooks
           mkdir workbooks
           cp -r ML_for_Non_DS_Students/class_workbooks/*.ipynb workbooks
-          ls -la workbooks
+          #ls -la workbooks
 
           # Images
           rm -rf images
@@ -77,8 +75,11 @@ jobs:
 
       # Commit all changed files back to the repository
       - name: Commit files
+        run: |
+          pwd
+          
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_options: '--no-verify --signoff'
+          #commit_options: '--no-verify --signoff'
           #token: ${{ secrets.GH_PAT }}
           commit_message: "Update files from Base Repository"
