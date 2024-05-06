@@ -101,7 +101,9 @@ jobs:
       - name: Commit files
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          repository: 'AkeemSemper/Programming_for_ML_Student_Workbooks'
+          #repository: 'AkeemSemper/Programming_for_ML_Student_Workbooks'
+          owner: 'AkeemSemper'
+          repository: 'Programming_for_ML_Student_Workbooks'
           commit_options: '--no-verify --signoff'
           branch: main
           #token: ${{ secrets.GH_PAT }}
