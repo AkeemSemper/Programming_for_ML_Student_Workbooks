@@ -27,8 +27,7 @@ jobs:
       - name: Setup commit files
         uses: actions/checkout@v4
         with:
-          ref: 'main'
-          token: ${{ secrets.PAT }}
+          token: ${{ secrets.ACCESS_TOKEN }}
 
       - name: Clone GuillaumeFalourd/poc-github-actions PUBLIC repository
         uses: GuillaumeFalourd/clone-github-repo-action@main
