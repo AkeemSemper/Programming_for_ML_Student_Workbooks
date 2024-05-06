@@ -24,6 +24,12 @@ jobs:
       contents: write
 
     steps:
+      - name: Setup commit files
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.PAT }}
+
       - name: Clone GuillaumeFalourd/poc-github-actions PUBLIC repository
         uses: GuillaumeFalourd/clone-github-repo-action@main
         with:
@@ -62,11 +68,8 @@ jobs:
 
           # Clear
           rm -rf ML_for_Non_DS_Students
-      - name: Setup commit files
-        uses: actions/checkout@v4
-        with:
-          ref: main
-          token: ${{ secrets.PAT }}
+
+
 
       # Commit all changed files back to the repository
       - name: Commit files
@@ -74,3 +77,4 @@ jobs:
         with:
           commit_options: '--no-verify --signoff'
           token: ${{ secrets.ACCESS_TOKEN }}
+          push-options: '--force'
