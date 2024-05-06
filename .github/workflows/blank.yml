@@ -72,12 +72,10 @@ jobs:
           # Clear
           rm -rf ML_for_Non_DS_Students
           cd
+          ls
 
       # Commit all changed files back to the repository
       - name: Commit files
-        run: |
-          pwd
-          
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           #commit_options: '--no-verify --signoff'
