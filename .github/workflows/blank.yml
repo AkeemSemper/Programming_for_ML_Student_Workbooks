@@ -74,6 +74,8 @@ jobs:
           #cd
           #ls
           git init
+          git config user.name "Akeem Semper"
+          git config user.email "akeem.semper@gmail.com"
           git commit -m "Prep for Commit"
           git push -u origin main
 
