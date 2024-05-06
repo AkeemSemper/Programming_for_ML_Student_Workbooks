@@ -25,19 +25,20 @@ jobs:
     steps:
       - name: Setup commit files
         uses: actions/checkout@v4
-        #with:
-        #  token: ${{ secrets.ACCESS_TOKEN }}
+        with:
+          repository: 'AkeemSemper/ML_for_Non_DS_Students'
+          token: ${{ secrets.ACCESS_TOKEN }}
 
       #- name: Clone GuillaumeFalourd/poc-github-actions PRIVATE repository
       #  uses: GuillaumeFalourd/clone-github-repo-action@main
-      - name: Clone GuillaumeFalourd/formulas-training PRIVATE repository
-        uses: GuillaumeFalourd/clone-github-repo-action@main
-        with:
-          #owner: 'AkeemSemper'
-          repository: 'AkeemSemper/ML_for_Non_DS_Students'
-          #access-token: ${{ secrets.ACCESS_TOKEN }}
-          #access-token: ${{ secrets.GITHUB_TOKEN }}
-          access-token: ${{ secrets.GITHUB_TOKEN }}
+      #- name: Clone GuillaumeFalourd/formulas-training PRIVATE repository
+      #  uses: GuillaumeFalourd/clone-github-repo-action@main
+      #  with:
+      #    #owner: 'AkeemSemper'
+      #    repository: 'AkeemSemper/ML_for_Non_DS_Students'
+      #    #access-token: ${{ secrets.ACCESS_TOKEN }}
+      #    #access-token: ${{ secrets.GITHUB_TOKEN }}
+      #    access-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Access cloned repository content
         run: |
