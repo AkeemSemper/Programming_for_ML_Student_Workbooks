@@ -16,39 +16,22 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  
+  job-public-repo-ubuntu:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      
+      - name: Clone AkeemSemper/Programming_for_ML_Student_Workbooks PUBLIC repository
+        uses: GuillaumeFalourd/clone-github-repo-action@main
+        with:
+          owner: 'GuillaumeFalourd'
+          repository: 'poc-github-actions'
+      
+      - name: Access cloned repository content
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-              - name: Clone Github Repo
-copy:
-  - name: AkeemSemper/ML_for_Non_DS_Students PUBLIC repository
-    uses: GuillaumeFalourd/clone-github-repo-action@v2.3
-    with:
-      depth: 1
-      branch: 'main'
-      owner: 'AkeemSemper'
-      repository: 'Programming_for_ML_Student_Workbooks'
-
-  - name: Access cloned repository content
-    run: |
-      echo "ROOT"
-      ls -la
-      echo "CLONED REPO"
-      cd poc-github-actions
-      ls -la
+          echo "ROOT"
+          ls -la
+          echo "CLONED REPO"
+          cd poc-github-actions
+          ls -la
           
