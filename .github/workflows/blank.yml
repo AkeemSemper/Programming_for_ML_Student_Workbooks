@@ -28,26 +28,24 @@ jobs:
         run: |
           echo "GH_PAT=${{ secrets.GH_PAT }}" >> $GITHUB_ENV
 
-      - name: Setup commit files
-        uses: actions/checkout@v4
-        with:
-          repository: 'AkeemSemper/ML_for_Non_DS_Students'
-          ref: 'main'
-          #token: ${{ secrets.GITHUB_TOKEN }}
-          #token: ${{ secrets.COPY_PAT }}
-          token: ${{ secrets.GH_PAT }}
-          path: 'ML_for_Non_DS_Students'
+      #- name: Setup commit files
+      #  uses: actions/checkout@v4
+      #  with:
+      #    repository: 'AkeemSemper/ML_for_Non_DS_Students'
+      #    ref: 'main'
+      #    #token: ${{ secrets.GITHUB_TOKEN }}
+      #    #token: ${{ secrets.COPY_PAT }}
+      #    token: ${{ secrets.GH_PAT }}
+      #    path: 'ML_for_Non_DS_Students'
 
-      #- name: Clone GuillaumeFalourd/poc-github-actions PRIVATE repository
-      #  uses: GuillaumeFalourd/clone-github-repo-action@main
+      - name: Clone GuillaumeFalourd/poc-github-actions PRIVATE repository
+        uses: GuillaumeFalourd/clone-github-repo-action@main
       #- name: Clone GuillaumeFalourd/formulas-training PRIVATE repository
       #  uses: GuillaumeFalourd/clone-github-repo-action@main
-      #  with:
-      #    #owner: 'AkeemSemper'
-      #    repository: 'AkeemSemper/ML_for_Non_DS_Students'
-      #    #access-token: ${{ secrets.ACCESS_TOKEN }}
-      #    #access-token: ${{ secrets.GITHUB_TOKEN }}
-      #    access-token: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          owner: 'AkeemSemper'
+          repository: 'ML_for_Non_DS_Students'
+          access-token: ${{ secrets.GH_PAT }}
 
       - name: Access cloned repository content
         run: |
