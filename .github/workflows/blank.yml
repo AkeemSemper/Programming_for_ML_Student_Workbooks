@@ -29,8 +29,13 @@ jobs:
         with:
           repository: 'AkeemSemper/Programming_for_ML_Student_Workbooks'
           ref: 'main'
+
           #token: ${{ secrets.GH_PAT }}
-          
+      - name: Check Rep
+        run: |
+          ls
+          git status
+
       #- name: Setup commit files
       #  uses: actions/checkout@v4
       #  with:
@@ -81,12 +86,12 @@ jobs:
           #cd
           #ls
           
-          ls
-          cd ../
-          git status
-          git init
-          git add .
-          git remote add origin https://github.com/AkeemSemper/Programming_for_ML_Student_Workbooks.git
+          #ls
+          #cd ../
+          #git status
+          #git init
+          #git add .
+          #git remote add origin https://github.com/AkeemSemper/Programming_for_ML_Student_Workbooks.git
           #git push origin main
           #git push --set-upstream https://github.com/AkeemSemper/Programming_for_ML_Student_Workbooks.git origin
 
@@ -98,7 +103,12 @@ jobs:
           #git commit -m "Prep for Commit"
 
           #git push --force
-
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "generated"
+          git push
       # Commit all changed files back to the repository
       - name: Commit files
         uses: stefanzweifel/git-auto-commit-action@v5
