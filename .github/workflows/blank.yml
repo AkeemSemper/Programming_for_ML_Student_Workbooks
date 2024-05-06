@@ -27,6 +27,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: 'AkeemSemper/ML_for_Non_DS_Students'
+          ref: 'main'
           token: ${{ secrets.GITHUB_TOKEN }}
 
       #- name: Clone GuillaumeFalourd/poc-github-actions PRIVATE repository
