@@ -29,7 +29,7 @@ jobs:
           ref: main
           token: ${{ secrets.PAT }}
 
-      - name: Clone GuillaumeFalourd/poc-github-actions PRIVATE repository
+      - name: Clone GuillaumeFalourd/poc-github-actions PUBLIC repository
         uses: GuillaumeFalourd/clone-github-repo-action@main
         with:
           #owner: 'GuillaumeFalourd'
