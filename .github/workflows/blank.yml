@@ -73,7 +73,7 @@ jobs:
           rm -rf ML_for_Non_DS_Students
           #cd
           #ls
-          git status
+          git init
 
       # Commit all changed files back to the repository
       - name: Commit files
