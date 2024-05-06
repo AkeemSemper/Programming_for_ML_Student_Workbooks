@@ -11,7 +11,7 @@ on:
   pull_request:
     branches: [ "main" ]
 
-    
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -31,7 +31,7 @@ jobs:
           ref: 'main'
           #token: ${{ secrets.GITHUB_TOKEN }}
           token: ${{ secrets.COPY_PAT }}
-          path: 'downloaded-repo'
+          path: 'AkeemSemper/ML_for_Non_DS_Students'
 
       #- name: Clone GuillaumeFalourd/poc-github-actions PRIVATE repository
       #  uses: GuillaumeFalourd/clone-github-repo-action@main
