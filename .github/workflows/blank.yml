@@ -37,7 +37,7 @@ jobs:
           repository: 'AkeemSemper/ML_for_Non_DS_Students'
           #access-token: ${{ secrets.ACCESS_TOKEN }}
           #access-token: ${{ secrets.GITHUB_TOKEN }}
-          access-token: ${{ secrets.COPY_PAT }}
+          access-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Access cloned repository content
         run: |
