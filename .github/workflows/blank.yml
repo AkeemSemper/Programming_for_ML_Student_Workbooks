@@ -83,8 +83,8 @@ jobs:
       # Commit all changed files back to the repository
       - name: Commit files
         uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_options: '--no-verify --signoff'
+        #with:
+          #commit_options: '--no-verify --signoff'
           #token: ${{ secrets.ACCESS_TOKEN }}
           #push-options: '--force'
-          commit_message: "Update files from Base Repository"
+          #commit_message: "Update files from Base Repository"
