@@ -42,4 +42,5 @@ jobs:
           #cd Programming_for_ML_Student_Workbooks
           #ls -la
           #ls -LR
-          
+          mkdir workbooks
+          cp -r ML_for_Non_DS_Students/class_workbooks/* workbooks/
