@@ -24,22 +24,20 @@ jobs:
       contents: write
 
     steps:
-      - name: Setup commit files
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.ACCESS_TOKEN }}
+
 
       - name: Clone GuillaumeFalourd/poc-github-actions PUBLIC repository
         uses: GuillaumeFalourd/clone-github-repo-action@main
         with:
           owner: 'AkeemSemper'
-          #repository: 'Programming_for_ML_Student_Workbooks'
           repository: 'ML_for_Non_DS_Students'
-          #repository: 'ml_data'
-          submodule: True
-          #depth: 5
           access-token: ${{ secrets.ACCESS_TOKEN }}
-      
+
+      - name: Setup commit files
+        uses: actions/checkout@v4
+        with:
+            token: ${{ secrets.ACCESS_TOKEN }}
+          
       - name: Access cloned repository content
         run: |
           # Workbooks
@@ -77,3 +75,4 @@ jobs:
           commit_options: '--no-verify --signoff'
           token: ${{ secrets.ACCESS_TOKEN }}
           push-options: '--force'
+          commit_message: "Update files from Base Repository"
