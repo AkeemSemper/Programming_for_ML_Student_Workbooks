@@ -28,6 +28,8 @@ jobs:
           #repository: 'poc-github-actions'
           owner: 'AkeemSemper'
           repository: 'Programming_for_ML_Student_Workbooks'
+          submodule: True
+          depth: 5
       
       - name: Access cloned repository content
         run: |
