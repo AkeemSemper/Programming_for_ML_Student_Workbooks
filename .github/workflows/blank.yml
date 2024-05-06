@@ -84,8 +84,9 @@ jobs:
       # Commit all changed files back to the repository
       - name: Commit files
         uses: stefanzweifel/git-auto-commit-action@v5
-        #with:
-          #commit_options: '--no-verify --signoff'
+        with:
+          repository: 'AkeemSemper/Programming_for_ML_Student_Workbooks'
+          commit_options: '--no-verify --signoff'
           #branch: main
           #token: ${{ secrets.GH_PAT }}
           #commit_message: "Update files from Base Repository"
