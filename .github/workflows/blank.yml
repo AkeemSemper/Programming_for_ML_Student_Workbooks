@@ -57,7 +57,7 @@ jobs:
           cp -r ML_for_Non_DS_Students/course_resources/* course_resources
 
           ## Supplementary Practice Workbooks
-          rm -rf ssupplementary_practice_workbooks
+          rm -rf supplementary_practice_workbooks
           mkdir supplementary_practice_workbooks
           cp -r ML_for_Non_DS_Students/supplementary_practice_workbooks/*.ipynb supplementary_practice_workbooks
 
