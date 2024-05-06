@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       
-      - name: Clone AkeemSemper/Programming_for_ML_Student_Workbooks PUBLIC repository
+      - name: Clone GuillaumeFalourd/poc-github-actions PUBLIC repository
         uses: GuillaumeFalourd/clone-github-repo-action@main
         with:
           #owner: 'GuillaumeFalourd'
