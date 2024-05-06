@@ -24,6 +24,11 @@ jobs:
       contents: write
 
     steps:
+      - name: Copy Environment Variables
+        run: |
+          echo "ACCESS_TOKEN=${{ secrets.ACCESS_TOKEN }}" >> $GITHUB_ENV
+          echo "GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}" >> $GITHUB_ENV
+          
       - name: Setup commit files
         uses: actions/checkout@v2
         with:
