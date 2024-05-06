@@ -51,6 +51,9 @@ jobs:
 
       - name: Access cloned repository content
         run: |
+          # Check Status
+          ls -rf
+          
           # Workbooks
           rm -rf workbooks
           mkdir workbooks
