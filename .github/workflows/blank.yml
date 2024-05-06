@@ -37,7 +37,7 @@ jobs:
           repository: 'ML_for_Non_DS_Students'
           #access-token: ${{ secrets.ACCESS_TOKEN }}
           #access-token: ${{ secrets.GITHUB_TOKEN }}
-          token: ${{ secrets.COPY_PAT }}
+          access-token: ${{ secrets.COPY_PAT }}
 
       - name: Access cloned repository content
         run: |
