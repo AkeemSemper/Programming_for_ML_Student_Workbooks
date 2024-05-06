@@ -28,7 +28,9 @@ jobs:
         #with:
         #  token: ${{ secrets.ACCESS_TOKEN }}
 
-      - name: Clone GuillaumeFalourd/poc-github-actions PRIVATE repository
+      #- name: Clone GuillaumeFalourd/poc-github-actions PRIVATE repository
+      #  uses: GuillaumeFalourd/clone-github-repo-action@main
+      - name: Clone GuillaumeFalourd/formulas-training PRIVATE repository
         uses: GuillaumeFalourd/clone-github-repo-action@main
         with:
           owner: 'AkeemSemper'
