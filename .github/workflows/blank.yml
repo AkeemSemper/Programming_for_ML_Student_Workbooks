@@ -73,6 +73,7 @@ jobs:
           rm -rf ML_for_Non_DS_Students
           #cd
           #ls
+          git status
           git init
           git config --global init.defaultBranch main
           git config user.name "Akeem Semper"
