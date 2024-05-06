@@ -36,7 +36,7 @@ jobs:
           #token: ${{ secrets.GITHUB_TOKEN }}
           #token: ${{ secrets.COPY_PAT }}
           token: ${{ secrets.GH_PAT }}
-          #path: 'AkeemSemper/ML_for_Non_DS_Students'
+          path: 'ML_for_Non_DS_Students'
 
       #- name: Clone GuillaumeFalourd/poc-github-actions PRIVATE repository
       #  uses: GuillaumeFalourd/clone-github-repo-action@main
@@ -53,7 +53,7 @@ jobs:
         run: |
           # Check Status
           ls -rf
-          
+
           # Workbooks
           rm -rf workbooks
           mkdir workbooks
