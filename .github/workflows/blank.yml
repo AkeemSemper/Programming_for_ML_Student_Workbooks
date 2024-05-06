@@ -24,8 +24,6 @@ jobs:
       contents: write
 
     steps:
-
-
       - name: Clone GuillaumeFalourd/poc-github-actions PUBLIC repository
         uses: GuillaumeFalourd/clone-github-repo-action@main
         with:
@@ -33,10 +31,10 @@ jobs:
           repository: 'ML_for_Non_DS_Students'
           access-token: ${{ secrets.ACCESS_TOKEN }}
 
-      - name: Setup commit files
-        uses: actions/checkout@v4
-        with:
-            token: ${{ secrets.ACCESS_TOKEN }}
+      #- name: Setup commit files
+      #  uses: actions/checkout@v4
+      #  with:
+      #      token: ${{ secrets.ACCESS_TOKEN }}
           
       - name: Access cloned repository content
         run: |
