@@ -72,7 +72,8 @@ jobs:
           # Clear
           rm -rf ML_for_Non_DS_Students
           #cd
-          ls
+          #ls
+          git status
 
       # Commit all changed files back to the repository
       - name: Commit files
