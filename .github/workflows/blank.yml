@@ -86,5 +86,5 @@ jobs:
         with:
           commit_options: '--no-verify --signoff'
           #token: ${{ secrets.ACCESS_TOKEN }}
-          push-options: '--force'
+          #push-options: '--force'
           commit_message: "Update files from Base Repository"
