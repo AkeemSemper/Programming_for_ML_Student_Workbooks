@@ -32,9 +32,9 @@ jobs:
       - name: Access cloned repository content
         run: |
           echo "ROOT"
-          ls -la
+          #ls -la
           echo "CLONED REPO"
           cd Programming_for_ML_Student_Workbooks
           #ls -la
-          ls
+          ls -r
           
