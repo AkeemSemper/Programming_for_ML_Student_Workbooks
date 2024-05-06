@@ -25,7 +25,7 @@ jobs:
 
     steps:
       - name: Setup commit files
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
         with:
           repository: 'AkeemSemper/ML_for_Non_DS_Students'
           ref: 'main'
