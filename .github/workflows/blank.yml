@@ -35,18 +35,20 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
               - name: Clone Github Repo
-  # You may pin to the exact commit or the version.
-  # uses: whyakari/github-repo-action@809aeef1050b89b6f64d36fb9893c5e9ceaecbba
-  uses: AkeemSemper/ML_for_Non_DS_Students@75967c9f52d44621b0c8a88ba7a96c2d2b551b5f
-  with:
-    # Repository Owner
-    owner: 
-    # Repository name
-    repository: 
-    # PAT with repository scope (https://github.com/settings/tokens)
-    access-token: # optional
-    # Depth of the clone (default: full history)
-    depth: # optional, default is 
-    # Branch name (default: main)
-    branch: # optional, default is main
+copy:
+  - name: AkeemSemper/ML_for_Non_DS_Students PUBLIC repository
+    uses: GuillaumeFalourd/clone-github-repo-action@v2.3
+    with:
+      depth: 1
+      branch: 'main'
+      owner: 'AkeemSemper'
+      repository: 'Programming_for_ML_Student_Workbooks'
+
+  - name: Access cloned repository content
+    run: |
+      echo "ROOT"
+      ls -la
+      echo "CLONED REPO"
+      cd poc-github-actions
+      ls -la
           
