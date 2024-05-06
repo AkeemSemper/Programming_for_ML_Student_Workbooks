@@ -27,7 +27,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
-          
+
       - name: Clone GuillaumeFalourd/poc-github-actions PUBLIC repository
         uses: GuillaumeFalourd/clone-github-repo-action@main
         with:
@@ -42,16 +42,18 @@ jobs:
       
       - name: Access cloned repository content
         run: |
-          #echo "ROOT"
-          #ls -la
-          #echo "CLONED REPO"
-          #ls -LR
-          #cd Programming_for_ML_Student_Workbooks
-          #ls -la
-          #ls -LR
+          # Workbooks
+          rm -rf workbooks
           mkdir workbooks
-          cp -r ML_for_Non_DS_Students/class_workbooks/* workbooks/
+          cp -r ML_for_Non_DS_Students/class_workbooks/*.ipynb workbooks
           ls -la workbooks
+
+          # Images
+          rm -rf images
+          mkdir images
+          cp -r ML_for_Non_DS_Students/images/* images
+
+          # Data
 
       # Commit all changed files back to the repository
       - name: Commit files
