@@ -24,16 +24,9 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-          token: ${{ secrets.PAT }}
-
       - name: Clone GuillaumeFalourd/poc-github-actions PUBLIC repository
         uses: GuillaumeFalourd/clone-github-repo-action@main
         with:
-          #owner: 'GuillaumeFalourd'
-          #repository: 'poc-github-actions'
           owner: 'AkeemSemper'
           #repository: 'Programming_for_ML_Student_Workbooks'
           repository: 'ML_for_Non_DS_Students'
@@ -69,6 +62,10 @@ jobs:
 
           # Clear
           rm -rf ML_for_Non_DS_Students
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.PAT }}
 
       # Commit all changed files back to the repository
       - name: Commit files
