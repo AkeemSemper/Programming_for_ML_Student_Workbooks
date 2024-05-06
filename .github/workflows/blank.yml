@@ -29,6 +29,7 @@ jobs:
           repository: 'AkeemSemper/ML_for_Non_DS_Students'
           ref: 'main'
           token: ${{ secrets.GITHUB_TOKEN }}
+          path: 'downloaded-repo'
 
       #- name: Clone GuillaumeFalourd/poc-github-actions PRIVATE repository
       #  uses: GuillaumeFalourd/clone-github-repo-action@main
