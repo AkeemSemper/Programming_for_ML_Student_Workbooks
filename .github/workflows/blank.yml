@@ -107,17 +107,17 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "generated"
+          git commit -m "Generated Update from Main Repository"
           git push
       # Commit all changed files back to the repository
-      - name: Commit files
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          repository: 'AkeemSemper/Programming_for_ML_Student_Workbooks'
+      #- name: Commit files
+        #uses: stefanzweifel/git-auto-commit-action@v5
+        #with:
+          #repository: 'AkeemSemper/Programming_for_ML_Student_Workbooks'
           #owner: 'AkeemSemper'
           #repository: 'Programming_for_ML_Student_Workbooks'
-          commit_options: '--no-verify --signoff'
-          branch: main
+          #commit_options: '--no-verify --signoff'
+          #branch: main
           #token: ${{ secrets.GH_PAT }}
           #commit_message: "Update files from Base Repository"
           #skip_dirty_check: true
