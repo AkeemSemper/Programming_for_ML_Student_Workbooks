@@ -74,8 +74,10 @@ jobs:
           #cd
           #ls
           git init
+          git config --global init.defaultBranch main
           git config user.name "Akeem Semper"
           git config user.email "akeem.semper@gmail.com"
+          git add .
           git commit -m "Prep for Commit"
           git push -u origin main
 
