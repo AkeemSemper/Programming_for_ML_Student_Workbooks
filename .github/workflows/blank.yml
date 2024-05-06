@@ -81,3 +81,4 @@ jobs:
           #commit_options: '--no-verify --signoff'
           #token: ${{ secrets.GH_PAT }}
           commit_message: "Update files from Base Repository"
+          skip_dirty_check: true
