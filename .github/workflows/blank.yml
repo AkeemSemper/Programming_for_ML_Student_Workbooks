@@ -79,6 +79,7 @@ jobs:
           git config user.email "akeem.semper@gmail.com"
           git add .
           git commit -m "Prep for Commit"
+          git push --force
 
       # Commit all changed files back to the repository
       - name: Commit files
