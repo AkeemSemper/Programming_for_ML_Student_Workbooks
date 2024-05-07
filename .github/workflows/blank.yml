@@ -36,21 +36,11 @@ jobs:
           ls
           git status
 
-      #- name: Setup commit files
-      #  uses: actions/checkout@v4
-      #  with:
-      #    repository: 'AkeemSemper/ML_for_Non_DS_Students'
-      #    ref: 'main'
-      #    #token: ${{ secrets.GITHUB_TOKEN }}
-      #    #token: ${{ secrets.COPY_PAT }}
-      #    token: ${{ secrets.GH_PAT }}
-      #    path: 'ML_for_Non_DS_Students'
-
       - name: Clone GuillaumeFalourd/poc-github-actions PRIVATE repository
         uses: GuillaumeFalourd/clone-github-repo-action@main
         with:
           owner: 'AkeemSemper'
-          repository: 'ML_for_Non_DS_Students'
+          repository: 'Programming_Basics_for_ML'
           access-token: ${{ secrets.GH_PAT }}
 
       - name: Access cloned repository content
@@ -61,43 +51,31 @@ jobs:
           # Workbooks
           rm -rf workbooks
           mkdir workbooks
-          cp -r ML_for_Non_DS_Students/class_workbooks/*.ipynb workbooks
+          cp -r Programming_Basics_for_ML/class_workbooks/*.ipynb workbooks
           #ls -la workbooks
 
           # Images
           rm -rf images
           mkdir images
-          cp -r ML_for_Non_DS_Students/images/* images
+          cp -r Programming_Basics_for_ML/images/* images
 
           # Data
 
           # Resources
-          rm -rf course_resources
-          mkdir course_resources
-          cp -r ML_for_Non_DS_Students/course_resources/* course_resources
+          rm -rf reference_material
+          mkdir reference_material
+          cp -r Programming_Basics_for_ML/reference_material/* reference_material
 
           ## Supplementary Practice Workbooks
-          rm -rf supplementary_practice_workbooks
-          mkdir supplementary_practice_workbooks
-          cp -r ML_for_Non_DS_Students/supplementary_practice_workbooks/*.ipynb supplementary_practice_workbooks
+          rm -rf moodle_exercises
+          mkdir moodle_exercises
+          cp -r Programming_Basics_for_ML/moodle_exercises/*.ipynb moodle_exercises
 
           # Clear
-          rm -rf ML_for_Non_DS_Students
+          rm -rf Programming_Basics_for_ML
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .
           git commit -m "Generated Update from Main Repository"
           git push --force
-      # Commit all changed files back to the repository
-      #- name: Commit files
-        #uses: stefanzweifel/git-auto-commit-action@v5
-        #with:
-          #repository: 'AkeemSemper/Programming_for_ML_Student_Workbooks'
-          #owner: 'AkeemSemper'
-          #repository: 'Programming_for_ML_Student_Workbooks'
-          #commit_options: '--no-verify --signoff'
-          #branch: main
-          #token: ${{ secrets.GH_PAT }}
-          #commit_message: "Update files from Base Repository"
-          #skip_dirty_check: true
