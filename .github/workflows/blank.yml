@@ -51,7 +51,7 @@ jobs:
           # Workbooks
           rm -rf workbooks
           mkdir workbooks
-          cp -r Programming_Basics_for_ML/class_workbooks/*.ipynb workbooks
+          cp -r Programming_Basics_for_ML/workbooks/*.ipynb workbooks
           #ls -la workbooks
 
           # Images
